@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Image Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        body {
+            background-color: #363636;
+            color: #fff;
+            padding-top: 3.25rem;
+        }
+
+        .single-image-section {
+            padding: 3rem 0;
+            background-color: #1f1f1f;
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .prompt-details {
+            padding: 1rem;
+        }
+
+        .prompt-details h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .prompt-details p {
+            color: #a0a0a0;
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .image-container {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+            }
+
+            .prompt-details {
+                padding: 1rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    Minimal Homepage
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="#">
+                        About
+                    </a>
+                    <a class="navbar-item" href="#">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="single-image-section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third prompt-details">
+                    <h3>Prompt</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit risus non vestibulum. Maecenas id ipsum a justo dapibus scelerisque non eget nulla. Sed tristique, dui vel fermentum consequat, turpis justo ultricies mi, et viverra quam lorem eu velit.
+                    </p>
+                    <h3>Negative Prompt</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit risus non vestibulum. Maecenas id ipsum a justo dapibus scelerisque non eget nulla. Sed tristique, dui vel fermentum consequat, turpis justo ultricies mi, et viverra quam lorem eu velit.
+                    </p>
+                </div>
+                <div class="column is-two-thirds image-container">
+                    <img src="https://source.unsplash.com/random/800x600" alt="Random Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content">
+            <p>Minimal Homepage &copy; 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Get all "navbar-burger" elements
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                        // Get the target from the "data-target" attribute
+                        var target = $el.dataset.target;
+                        var $target = document.getElementById(target);
+
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>
