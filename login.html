@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        /* Your existing styles here */
+
+        /* Login form styles */
+        .login-section {
+            background-color: #1f1f1f;
+            color: #fff;
+            padding: 3rem 0;
+        }
+
+        .login-box {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .login-box .title {
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-box .field {
+            margin-bottom: 1.5rem;
+        }
+
+        .login-box .label {
+            color: #fff;
+        }
+
+        .login-box .input {
+            background-color: #363636;
+            color: #fff;
+            border-color: #363636;
+        }
+
+        .login-box .button {
+            background-color: silver;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .login-box .button:hover {
+            background-color: #a0a0a0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="login-section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="login-box">
+                        <h3 class="title is-3 has-text-centered">Login</h3>
+                        <form>
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control">
+                                    <input class="input" type="email" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Password</label>
+                                <div class="control">
+                                    <input class="input" type="password" placeholder="Enter your password">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control has-text-centered">
+                                    <button class="button is-large is-primary">Login</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
