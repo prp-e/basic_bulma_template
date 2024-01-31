@@ -209,6 +209,32 @@
                 flex-direction: column; /* Text below image for mobile */
             }
         }
+
+        @media screen and (min-width: 1024px) {
+            .text-image-container {
+                flex-direction: row; /* Text and image side by side for desktop */
+            }
+
+            .text-content {
+                flex-basis: 50%; /* Text takes up half the width */
+            }
+
+            .image-content {
+                flex-basis: 50%; /* Image takes up half the width */
+            }
+        }
+
+        @media screen and (max-width: 1023px) {
+            .text-image-container {
+                flex-direction: column-reverse; /* Image above text for tablet and mobile */
+            }
+
+            .text-content,
+            .image-content {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
