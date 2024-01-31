@@ -25,10 +25,42 @@
         .radio {
             width: 100%;
             margin-bottom: 1rem;
+            color: #fff; /* Text color */
         }
 
         .radio {
             display: block;
+        }
+
+        .submit-button {
+            background-color: silver; /* Silver background */
+            color: #fff; /* Text color */
+        }
+
+        .submit-button:hover {
+            background-color: #a0a0a0; /* Hover color */
+        }
+
+        .submit-button:active {
+            transform: translateY(1px); /* Pressed effect */
+        }
+
+        .submit-button.is-spinning::after {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 0.6s linear infinite;
+            margin-left: 5px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -78,16 +110,21 @@
                     <div class="control">
                         <label class="radio">
                             <input type="radio" name="style-option">
-                            Style Option 1
+                            Square
                         </label>
                         <label class="radio">
                             <input type="radio" name="style-option">
-                            Style Option 2
+                            Portrait
                         </label>
                         <label class="radio">
                             <input type="radio" name="style-option">
-                            Style Option 3
+                            Landscape
                         </label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary is-large submit-button" onclick="submitForm()">Submit</button>
                     </div>
                 </div>
             </form>
@@ -103,9 +140,14 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Existing JavaScript code
-        });
+        function submitForm() {
+            var button = document.querySelector('.submit-button');
+            button.classList.add('is-spinning');
+            // Perform form submission or any other action
+            setTimeout(function() {
+                button.classList.remove('is-spinning');
+            }, 2000); // Reset after 2 seconds
+        }
     </script>
 </body>
 
