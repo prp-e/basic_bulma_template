@@ -9,6 +9,207 @@
     <style>
         /* Existing styles remain unchanged */
 
+        body {
+            background-color: #363636;
+            color: #fff;
+            padding-top: 3.25rem;
+        }
+
+        .hero.is-primary {
+            background-color: #292929;
+        }
+
+        .hero-body {
+            padding-bottom: 2rem;
+        }
+
+        .title {
+            color: #fff;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+        }
+
+        .footer {
+            background-color: #1f1f1f;
+            color: #a0a0a0;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #1f1f1f;
+            border-bottom: 1px solid #363636;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand .navbar-item:hover {
+            background-color: transparent;
+        }
+
+        .navbar-item {
+            color: #fff;
+        }
+
+        .navbar-burger span {
+            background-color: #fff;
+        }
+
+        .navbar-menu {
+            background-color: #1f1f1f;
+        }
+
+        .navbar-menu a.navbar-item:hover {
+            background-color: #363636;
+        }
+
+        .features-section {
+            background: linear-gradient(to right, #1f1f1f, #292929);
+            padding: 3rem 0;
+        }
+
+        .feature-box {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .feature-box img {
+            border-radius: 50%;
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .text-image-section {
+            background: linear-gradient(to right, #292929, #1f1f1f);
+            padding: 3rem 0;
+        }
+
+        .text-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 0 2rem;
+        }
+
+        .text-content h3 {
+            color: #fff;
+        }
+
+        .text-content p {
+            color: #a0a0a0;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .call-to-action {
+            background-color: #1f1f1f;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .call-to-action h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .call-to-action button {
+            background-color: silver;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .call-to-action button:hover {
+            background-color: #a0a0a0;
+        }
+
+        .getting-started-button {
+            background-color: silver !important;
+        }
+
+        .first-section {
+            background: linear-gradient(to right, #444, #292929);
+            padding: 3rem 0;
+            padding-top: 6.25rem;
+        }
+
+        .first-section .container {
+            background: transparent;
+            padding: 0;
+        }
+
+        .first-section .title,
+        .first-section .subtitle,
+        .first-section button {
+            color: #fff;
+        }
+
+        .dark-grey-rectangle {
+            background-color: #444;
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .dark-grey-rectangle .title {
+            color: #fff;
+        }
+
+        .dark-grey-rectangle .subtitle {
+            color: #a0a0a0;
+        }
+
+        .dark-grey-rectangle button {
+            background-color: silver;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .dark-grey-rectangle button:hover {
+            background-color: #a0a0a0;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .first-section {
+                background: linear-gradient(to right, #444, #292929);
+                padding-top: 6.25rem;
+            }
+
+            .text-image-section .text-image-container {
+                flex-direction: column-reverse;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .first-section {
+                background: linear-gradient(to right, #444, #292929);
+                padding-top: 6.25rem;
+            }
+
+            .text-image-section .text-image-container {
+                flex-direction: column-reverse;
+            }
+        }
+
         /* New styles for pricing section */
         .pricing-section {
             background-color: #1f1f1f;
