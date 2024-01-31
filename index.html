@@ -142,11 +142,24 @@
         }
 
         .first-section {
-            background-image: url('https://source.unsplash.com/random');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
             padding: 3rem 0;
             padding-top: 6.25rem; /* Adjusted padding top to account for navbar height */
+        }
+
+        .first-section .container {
+            background: transparent; /* Remove dark grey rectangle background */
+            padding: 0;
+        }
+
+        .first-section .title,
+        .first-section .subtitle,
+        .first-section button {
+            color: #fff; /* White text color */
+        }
+
+        .text-image-section .text-image-container {
+            flex-direction: column; /* Text below image for mobile and tablet */
         }
 
         .dark-grey-rectangle {
@@ -175,6 +188,26 @@
 
         .dark-grey-rectangle button:hover {
             background-color: #a0a0a0;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .first-section {
+                background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
+            }
+
+            .text-image-section .text-image-container {
+                flex-direction: column; /* Text below image for tablet */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .first-section {
+                background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
+            }
+
+            .text-image-section .text-image-container {
+                flex-direction: column; /* Text below image for mobile */
+            }
         }
     </style>
 </head>
@@ -210,7 +243,7 @@
     </nav>
 
     <section class="first-section">
-        <div class="container dark-grey-rectangle">
+        <div class="container">
             <div class="has-text-centered">
                 <h1 class="title is-size-1">
                     Welcome to Minimal Homepage
