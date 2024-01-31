@@ -136,6 +136,41 @@
         .getting-started-button {
             background-color: silver !important;
         }
+
+        .first-section {
+            background-image: url('https://source.unsplash.com/random');
+            background-size: cover;
+            background-position: center;
+            padding: 3rem 0;
+        }
+
+        .dark-grey-rectangle {
+            background-color: #444;
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .dark-grey-rectangle .title {
+            color: #fff;
+        }
+
+        .dark-grey-rectangle .subtitle {
+            color: #a0a0a0;
+        }
+
+        .dark-grey-rectangle button {
+            background-color: silver;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .dark-grey-rectangle button:hover {
+            background-color: #a0a0a0;
+        }
     </style>
 </head>
 
@@ -169,9 +204,9 @@
         </div>
     </nav>
 
-    <section class="hero is-primary is-fullheight">
-        <div class="hero-body">
-            <div class="container has-text-centered">
+    <section class="first-section">
+        <div class="container dark-grey-rectangle">
+            <div class="has-text-centered">
                 <h1 class="title is-size-1">
                     Welcome to Minimal Homepage
                 </h1>
