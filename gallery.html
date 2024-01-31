@@ -39,15 +39,16 @@
             text-align: center;
         }
 
+        .photo-description {
+            flex-grow: 1;
+        }
+
         .view-details-button {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
             background-color: rgba(0, 0, 0, 0.8);
-            padding: 0.5rem;
+            padding: 0.5rem 1rem; /* Adjusted padding */
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
+            text-align: center;
         }
 
         .view-details-button a {
@@ -75,6 +76,35 @@
 </head>
 
 <body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    Minimal Homepage
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="#">
+                        About
+                    </a>
+                    <a class="navbar-item" href="#">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <section class="gallery-section">
         <div class="container">
             <div class="columns is-multiline">
@@ -82,11 +112,58 @@
                     <div class="photo-card">
                         <img src="https://source.unsplash.com/random/400x400" alt="Random Image">
                         <div class="photo-details">
-                            <h3>Photo Title</h3>
-                            <p>Description of the photo</p>
+                            <div class="photo-description">
+                                <h3>Photo Title</h3>
+                                <p>Description of the photo</p>
+                            </div>
+                            <div class="view-details-button">
+                                <a href="/photo">View Details</a>
+                            </div>
                         </div>
-                        <div class="view-details-button">
-                            <a href="/photo">View Details</a>
+                    </div>
+                </div>
+                <!-- Repeat the above div for each photo -->
+                <div class="column is-one-quarter">
+                    <div class="photo-card">
+                        <img src="https://source.unsplash.com/random/400x400" alt="Random Image">
+                        <div class="photo-details">
+                            <div class="photo-description">
+                                <h3>Photo Title</h3>
+                                <p>Description of the photo</p>
+                            </div>
+                            <div class="view-details-button">
+                                <a href="/photo">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the above div for each photo -->
+                <div class="column is-one-quarter">
+                    <div class="photo-card">
+                        <img src="https://source.unsplash.com/random/400x400" alt="Random Image">
+                        <div class="photo-details">
+                            <div class="photo-description">
+                                <h3>Photo Title</h3>
+                                <p>Description of the photo</p>
+                            </div>
+                            <div class="view-details-button">
+                                <a href="/photo">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the above div for each photo -->
+                <div class="column is-one-quarter">
+                    <div class="photo-card">
+                        <img src="https://source.unsplash.com/random/400x400" alt="Random Image">
+                        <div class="photo-details">
+                            <div class="photo-description">
+                                <h3>Photo Title</h3>
+                                <p>Description of the photo</p>
+                            </div>
+                            <div class="view-details-button">
+                                <a href="/photo">View Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,6 +171,40 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="content">
+            <p>Minimal Homepage &copy; 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Get all "navbar-burger" elements
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                        // Get the target from the "data-target" attribute
+                        var target = $el.dataset.target;
+                        var $target = document.getElementById(target);
+
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
 </body>
 
 </html>
