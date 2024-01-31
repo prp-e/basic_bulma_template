@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        /* Existing CSS styles */
+
+        /* New styles for form section */
+        .form-section {
+            background: linear-gradient(to right, #292929, #1f1f1f);
+            padding: 3rem 0;
+            color: #fff;
+        }
+
+        .select select {
+            padding: 0.5em 2em 0.5em 0.5em;
+        }
+
+        .select select,
+        .input,
+        .radio {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .radio {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Existing HTML content -->
+
+    <section class="form-section">
+        <div class="container">
+            <form>
+                <div class="field">
+                    <label class="label">Prompt</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Enter prompt">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Negative Prompt</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Enter negative prompt">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Style</label>
+                    <div class="control">
+                        <div class="select">
+                            <select>
+                                <option>Select style</option>
+                                <option>
+                                    <img src="https://source.unsplash.com/64x64/?style1" alt="Style 1">
+                                    Style 1
+                                </option>
+                                <option>
+                                    <img src="https://source.unsplash.com/64x64/?style2" alt="Style 2">
+                                    Style 2
+                                </option>
+                                <option>
+                                    <img src="https://source.unsplash.com/64x64/?style3" alt="Style 3">
+                                    Style 3
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Options</label>
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="style-option">
+                            Style Option 1
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="style-option">
+                            Style Option 2
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="style-option">
+                            Style Option 3
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Existing HTML content -->
+
+    <footer class="footer">
+        <div class="content">
+            <p>Minimal Homepage &copy; 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Existing JavaScript code
+        });
+    </script>
+</body>
+
+</html>
