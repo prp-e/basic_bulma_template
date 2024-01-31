@@ -10,6 +10,7 @@
         body {
             background-color: #363636;
             color: #fff;
+            padding-top: 3.25rem; /* Added padding to accommodate navbar height */
         }
 
         .hero.is-primary {
@@ -38,6 +39,9 @@
         .navbar {
             background-color: #1f1f1f;
             border-bottom: 1px solid #363636;
+            position: fixed;
+            width: 100%;
+            z-index: 1000; /* Ensure navbar is above other elements */
         }
 
         .navbar-brand .navbar-item:hover {
@@ -142,6 +146,7 @@
             background-size: cover;
             background-position: center;
             padding: 3rem 0;
+            padding-top: 6.25rem; /* Adjusted padding top to account for navbar height */
         }
 
         .dark-grey-rectangle {
