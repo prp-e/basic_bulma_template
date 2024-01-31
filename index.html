@@ -7,68 +7,232 @@
     <title>Minimal Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <style>
-        /* Common styles for both desktop and responsive modes */
         body {
             background-color: #363636;
             color: #fff;
-            padding-top: 3.25rem;
+            padding-top: 3.25rem; /* Added padding to accommodate navbar height */
         }
 
-        /* Desktop mode */
-        @media screen and (min-width: 1024px) {
+        .hero.is-primary {
+            background-color: #292929;
+        }
+
+        .hero-body {
+            padding-bottom: 2rem;
+        }
+
+        .title {
+            color: #fff;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+        }
+
+        .footer {
+            background-color: #1f1f1f;
+            color: #a0a0a0;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #1f1f1f;
+            border-bottom: 1px solid #363636;
+            position: fixed;
+            width: 100%;
+            z-index: 1000; /* Ensure navbar is above other elements */
+        }
+
+        .navbar-brand .navbar-item:hover {
+            background-color: transparent;
+        }
+
+        .navbar-item {
+            color: #fff;
+        }
+
+        .navbar-burger span {
+            background-color: #fff;
+        }
+
+        .navbar-menu {
+            background-color: #1f1f1f;
+        }
+
+        .navbar-menu a.navbar-item:hover {
+            background-color: #363636;
+        }
+
+        .features-section {
+            background: linear-gradient(to right, #1f1f1f, #292929);
+            padding: 3rem 0;
+        }
+
+        .feature-box {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .feature-box img {
+            border-radius: 50%;
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .text-image-section {
+            background: linear-gradient(to right, #292929, #1f1f1f);
+            padding: 3rem 0;
+        }
+
+        .text-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 0 2rem;
+        }
+
+        .text-content h3 {
+            color: #fff;
+        }
+
+        .text-content p {
+            color: #a0a0a0;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .call-to-action {
+            background-color: #1f1f1f;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .call-to-action h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .call-to-action button {
+            background-color: silver;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .call-to-action button:hover {
+            background-color: #a0a0a0;
+        }
+
+        .getting-started-button {
+            background-color: silver !important;
+        }
+
+        .first-section {
+            background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
+            padding: 3rem 0;
+            padding-top: 6.25rem; /* Adjusted padding top to account for navbar height */
+        }
+
+        .first-section .container {
+            background: transparent; /* Remove dark grey rectangle background */
+            padding: 0;
+        }
+
+        .first-section .title,
+        .first-section .subtitle,
+        .first-section button {
+            color: #fff; /* White text color */
+        }
+
+        .text-image-section .text-image-container {
+            flex-direction: column; /* Text below image for mobile and tablet */
+        }
+
+        .dark-grey-rectangle {
+            background-color: #444;
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .dark-grey-rectangle .title {
+            color: #fff;
+        }
+
+        .dark-grey-rectangle .subtitle {
+            color: #a0a0a0;
+        }
+
+        .dark-grey-rectangle button {
+            background-color: silver;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .dark-grey-rectangle button:hover {
+            background-color: #a0a0a0;
+        }
+
+        @media screen and (max-width: 1023px) {
             .first-section {
-                background: url("https://source.unsplash.com/random/1600x900") no-repeat center center fixed;
-                background-size: cover;
-                padding-top: 6.25rem;
-            }
-
-            .first-section .container {
-                background: linear-gradient(to right, #444, #292929);
-                border-radius: 20px;
-                padding: 3rem;
-            }
-
-            .first-section .title,
-            .first-section .subtitle {
-                color: #fff;
+                background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
             }
 
             .text-image-section .text-image-container {
-                flex-direction: row; /* Text on left, image on right */
+                flex-direction: column; /* Text below image for tablet */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .first-section {
+                background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
+            }
+
+            .text-image-section .text-image-container {
+                flex-direction: column; /* Text below image for mobile */
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .text-image-container {
+                flex-direction: row; /* Text and image side by side for desktop */
             }
 
             .text-content {
-                flex-basis: 50%;
-                padding-right: 2rem;
+                flex-basis: 50%; /* Text takes up half the width */
             }
 
             .image-content {
-                flex-basis: 50%;
-                padding-left: 2rem;
+                flex-basis: 50%; /* Image takes up half the width */
             }
         }
 
-        /* Responsive mode */
         @media screen and (max-width: 1023px) {
-            .first-section {
-                background: linear-gradient(to right, #444, #292929);
-                padding-top: 6.25rem;
-            }
-
-            .first-section .container {
-                border-radius: 0; /* Remove border-radius */
-                padding: 3rem 0; /* Adjust padding */
-            }
-
-            .text-image-section .text-image-container {
-                flex-direction: column-reverse; /* Image above text */
+            .text-image-container {
+                flex-direction: column-reverse; /* Image above text for tablet and mobile */
             }
 
             .text-content,
             .image-content {
                 width: 100%;
                 text-align: center;
-                padding: 0 1rem; /* Adjust padding */
             }
         }
     </style>
@@ -76,10 +240,34 @@
 
 <body>
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <!-- Navbar code remains unchanged -->
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    Minimal Homepage
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="#">
+                        About
+                    </a>
+                    <a class="navbar-item" href="#">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <!-- First Section -->
     <section class="first-section">
         <div class="container">
             <div class="has-text-centered">
@@ -94,19 +282,41 @@
         </div>
     </section>
 
-    <!-- Second Section (Features) -->
     <section class="features-section">
-        <!-- Features section code remains unchanged -->
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-one-third">
+                    <div class="feature-box">
+                        <img src="https://source.unsplash.com/random/100x100" alt="Random Image">
+                        <p>Feature 1</p>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="feature-box">
+                        <img src="https://source.unsplash.com/random/100x100" alt="Random Image">
+                        <p>Feature 2</p>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="feature-box">
+                        <img src="https://source.unsplash.com/random/100x100" alt="Random Image">
+                        <p>Feature 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Third Section (Text on left, Image on right) -->
     <section class="text-image-section">
         <div class="container">
             <div class="text-image-container">
                 <div class="text-content">
                     <h3>Lorem ipsum dolor sit amet</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit risus non vestibulum. Maecenas id ipsum a justo dapibus scelerisque non eget nulla. Sed tristique, dui vel fermentum consequat, turpis justo ultricies mi, et viverra quam lorem eu velit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit risus non
+                        vestibulum. Maecenas id ipsum a justo dapibus scelerisque non eget nulla. Sed
+                        tristique, dui vel fermentum consequat, turpis justo ultricies mi, et viverra quam
+                        lorem eu velit.
                     </p>
                 </div>
                 <div class="image-content">
@@ -116,17 +326,46 @@
         </div>
     </section>
 
-    <!-- Call to Action Section -->
     <section class="call-to-action">
-        <!-- Call to action section code remains unchanged -->
+        <div class="container">
+            <h3>Ready to get started?</h3>
+            <a href="/sign_in"><button class="button is-primary is-large getting-started-button">Getting Started</button></a>
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <!-- Footer code remains unchanged -->
+        <div class="content">
+            <p>Minimal Homepage &copy; 2024. All rights reserved.</p>
+        </div>
     </footer>
 
-    <!-- JavaScript code remains unchanged -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Get all "navbar-burger" elements
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                        // Get the target from the "data-target" attribute
+                        var target = $el.dataset.target;
+                        var $target = document.getElementById(target);
+
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
 </body>
 
 </html>
