@@ -10,7 +10,7 @@
         body {
             background-color: #363636;
             color: #fff;
-            padding-top: 3.25rem; /* Added padding to accommodate navbar height */
+            padding-top: 3.25rem;
         }
 
         .hero.is-primary {
@@ -41,7 +41,7 @@
             border-bottom: 1px solid #363636;
             position: fixed;
             width: 100%;
-            z-index: 1000; /* Ensure navbar is above other elements */
+            z-index: 1000;
         }
 
         .navbar-brand .navbar-item:hover {
@@ -142,24 +142,20 @@
         }
 
         .first-section {
-            background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
+            background: linear-gradient(to right, #444, #292929);
             padding: 3rem 0;
-            padding-top: 6.25rem; /* Adjusted padding top to account for navbar height */
+            padding-top: 6.25rem;
         }
 
         .first-section .container {
-            background: transparent; /* Remove dark grey rectangle background */
+            background: transparent;
             padding: 0;
         }
 
         .first-section .title,
         .first-section .subtitle,
         .first-section button {
-            color: #fff; /* White text color */
-        }
-
-        .text-image-section .text-image-container {
-            flex-direction: column; /* Text below image for mobile and tablet */
+            color: #fff;
         }
 
         .dark-grey-rectangle {
@@ -192,47 +188,23 @@
 
         @media screen and (max-width: 1023px) {
             .first-section {
-                background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
+                background: linear-gradient(to right, #444, #292929);
+                padding-top: 6.25rem;
             }
 
             .text-image-section .text-image-container {
-                flex-direction: column; /* Text below image for tablet */
+                flex-direction: column-reverse;
             }
         }
 
         @media screen and (max-width: 768px) {
             .first-section {
-                background: linear-gradient(to right, #444, #292929); /* Dark grey gradient */
+                background: linear-gradient(to right, #444, #292929);
+                padding-top: 6.25rem;
             }
 
             .text-image-section .text-image-container {
-                flex-direction: column; /* Text below image for mobile */
-            }
-        }
-
-        @media screen and (min-width: 1024px) {
-            .text-image-container {
-                flex-direction: row; /* Text and image side by side for desktop */
-            }
-
-            .text-content {
-                flex-basis: 50%; /* Text takes up half the width */
-            }
-
-            .image-content {
-                flex-basis: 50%; /* Image takes up half the width */
-            }
-        }
-
-        @media screen and (max-width: 1023px) {
-            .text-image-container {
-                flex-direction: column-reverse; /* Image above text for tablet and mobile */
-            }
-
-            .text-content,
-            .image-content {
-                width: 100%;
-                text-align: center;
+                flex-direction: column-reverse;
             }
         }
     </style>
@@ -313,10 +285,7 @@
                 <div class="text-content">
                     <h3>Lorem ipsum dolor sit amet</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit risus non
-                        vestibulum. Maecenas id ipsum a justo dapibus scelerisque non eget nulla. Sed
-                        tristique, dui vel fermentum consequat, turpis justo ultricies mi, et viverra quam
-                        lorem eu velit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit risus non vestibulum. Maecenas id ipsum a justo dapibus scelerisque non eget nulla. Sed tristique, dui vel fermentum consequat, turpis justo ultricies mi, et viverra quam lorem eu velit.
                     </p>
                 </div>
                 <div class="image-content">
